@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assembly_Autonomous Mobile Robot v2">
+  <link name="base_footprint"/>
+
+  <joint name="footprint_to_base" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.82207408300217E-06 0.0965945721912241 -0.00477624516736158"
+        rpy="0 0 0" />
+      <mass
+        value="40.8110518723573" />
+      <inertia
+        ixx="1.74808717051851"
+        ixy="6.2801955472754E-07"
+        ixz="-9.55604401811303E-06"
+        iyy="3.28420799699786"
+        iyz="-7.60754299739436E-06"
+        izz="1.60914143174174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/base_link.stl"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/base_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="caster_fl_link">
+    <inertial>
+      <origin
+        xyz="1.71408075284596E-05 0.00735483662829919 0.639430825918995"
+        rpy="0 0 0" />
+      <mass
+        value="0.459809219429024" />
+      <inertia
+        ixx="0.000757259108613047"
+        ixy="-4.30401222184097E-10"
+        ixz="-2.01323494105589E-10"
+        iyy="0.000440066087421535"
+        iyz="-4.96876181079965E-06"
+        izz="0.000435539615390831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_fl_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_fl_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_fl_joint"
+    type="continuous">
+    <origin
+      xyz="0.293 -0.0948999999999999 -0.355899999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_fl_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="caster_fr_link  ">
+    <inertial>
+      <origin
+        xyz="1.71408076553462E-05 0.00935483663002537 0.00353082592073195"
+        rpy="0 0 0" />
+      <mass
+        value="0.459809219440089" />
+      <inertia
+        ixx="0.000757259108648758"
+        ixy="-4.30400287611279E-10"
+        ixz="-2.01321869076574E-10"
+        iyy="0.000440066087446062"
+        iyz="-4.96876182528868E-06"
+        izz="0.000435539615394934" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_fr_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_fr_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_fr_joint"
+    type="continuous">
+    <origin
+      xyz="-0.292999999999998 -0.0969000000000017 0.280000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_fr_link  " />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rocker_left_link">
+    <inertial>
+      <origin
+        xyz="-1.88737914186277E-15 0.00367820224054968 0.00646898635459164"
+        rpy="0 0 0" />
+      <mass
+        value="1.54794270266581" />
+      <inertia
+        ixx="0.0127508508524932"
+        ixy="1.15087326346587E-11"
+        ixz="-5.30656832935429E-11"
+        iyy="0.0127398867766919"
+        iyz="-1.78383920500782E-11"
+        izz="0.000467195672469047" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/rocker_left_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/rocker_left_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rocker_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.293 0.0136 -0.143"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rocker_left_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.26"
+      upper="0.26"
+      effort="115"
+      velocity="5" />
+  </joint>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.00092829660282534 0.0262738562589279 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.88092662249129" />
+      <inertia
+        ixx="0.00438439998573543"
+        ixy="-5.56771837395937E-21"
+        ixz="2.53474026554064E-20"
+        iyy="0.00374372421545181"
+        iyz="-4.86430656619724E-20"
+        izz="0.00343115283562007" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/left_wheel_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/left_wheel_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0660000000000033 -0.106999999999998 0.186000000000002"
+      rpy="0 0 0" />
+    <parent
+      link="rocker_left_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="caster_rl_link ">
+    <inertial>
+      <origin
+        xyz="1.71408076553581E-05 0.00935483663002351 0.00353082592073187"
+        rpy="0 0 0" />
+      <mass
+        value="0.459809219440086" />
+      <inertia
+        ixx="0.000757259108648756"
+        ixy="-4.3040028795521E-10"
+        ixz="-2.0132186636812E-10"
+        iyy="0.00044006608744606"
+        iyz="-4.96876182528875E-06"
+        izz="0.000435539615394932" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_rl_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_rl_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_rl_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.108499999999998 -0.212899999999998"
+      rpy="0 0 0" />
+    <parent
+      link="rocker_left_link" />
+    <child
+      link="caster_rl_link " />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rocker_right_link">
+    <inertial>
+      <origin
+        xyz="-8.82325039381573E-16 0.00367820224054964 0.00646898635459037"
+        rpy="0 0 0" />
+      <mass
+        value="1.5479427026658" />
+      <inertia
+        ixx="0.0127508508524931"
+        ixy="1.15087326248212E-11"
+        ixz="-5.30656835835839E-11"
+        iyy="0.0127398867766919"
+        iyz="-1.78383917147219E-11"
+        izz="0.000467195672469046" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/rocker_right_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/rocker_right_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rocker_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.293 0.0136 -0.143"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rocker_right_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.26"
+      upper="0.16"
+      effort="115"
+      velocity="5" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.000928296602825451 0.0262738562589278 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="2.88092662249128" />
+      <inertia
+        ixx="0.00438439998573542"
+        ixy="3.68289767751906E-20"
+        ixz="-7.98007702739345E-20"
+        iyy="0.0037437242154518"
+        iyz="-2.78208816066553E-20"
+        izz="0.00343115283562006" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/right_wheel_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/right_wheel_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0659999999999975 -0.106999999999998 0.186"
+      rpy="0 0 0" />
+    <parent
+      link="rocker_right_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="caster_rr_link">
+    <inertial>
+      <origin
+        xyz="1.71408075261297E-05 0.00935483662829928 0.00353082591899911"
+        rpy="0 0 0" />
+      <mass
+        value="0.459809219429025" />
+      <inertia
+        ixx="0.000757259108613047"
+        ixy="-4.30401222322276E-10"
+        ixz="-2.01323492072161E-10"
+        iyy="0.000440066087421535"
+        iyz="-4.96876181080011E-06"
+        izz="0.000435539615390831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_rr_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/caster_rr_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_rr_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.108499999999998 -0.212900000000001"
+      rpy="0 0 0" />
+    <parent
+      link="rocker_right_link" />
+    <child
+      link="caster_rr_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="lidar1_link ">
+    <inertial>
+      <origin
+        xyz="0.00500932815884211 0.0168261498246942 -0.00495438310113627"
+        rpy="0 0 0" />
+      <mass
+        value="0.0771202790659444" />
+      <inertia
+        ixx="1.90335768881085E-05"
+        ixy="2.39074860659404E-08"
+        ixz="-1.16360472208718E-06"
+        iyy="1.62999137098422E-05"
+        iyz="2.39587361544886E-08"
+        izz="1.88992370571686E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/lidar1_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/lidar1_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.31202 0.0446 0.36202"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar1_link " />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar2_link ">
+    <inertial>
+      <origin
+        xyz="-0.00500932815884203 0.0168261498246942 0.00495438310113601"
+        rpy="0 0 0" />
+      <mass
+        value="0.0771202790659445" />
+      <inertia
+        ixx="1.90335768881086E-05"
+        ixy="-2.39074860659451E-08"
+        ixz="-1.16360472208719E-06"
+        iyy="1.62999137098422E-05"
+        iyz="-2.39587361544837E-08"
+        izz="1.88992370571686E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/lidar2_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/rein/Documents/urdf_file/meshes/lidar2_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar2_joint"
+    type="fixed">
+    <origin
+      xyz="0.312021172413916 0.0446000000000011 -0.362021172413918"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar2_link " />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
