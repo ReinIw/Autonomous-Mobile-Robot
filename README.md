@@ -1,4 +1,4 @@
-<img width="1842" height="998" alt="image" src="https://github.com/user-attachments/assets/db8c7916-37db-4c3c-93a0-5a8825210f63" /># Autonomous-Mobile-Robot
+
 
 ## So what inside this folder : 
 1. urdf file
@@ -49,5 +49,4 @@ sudo apt install ros-humble-rviz2 -y
 5. Set up the global option ( fixed frame into your base link. stl ) add robot model then scroll down search for description topic change into robot_description 
 
 
-![Uploading image.png…]()
-
+<img width="1842" height="998" alt="image" src="https://github.com/user-attachments/assets/db8c7916-37db-4c3c-93a0-5a8825210f63" /># Autonomous-Mobile-Robot
