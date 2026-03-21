@@ -5,3 +5,7 @@
 
 ### Access Folder in ROS 2 
 cd ~/Documents
+
+### Make Folder  
+mkdir -p ~/AMR_ws/src  ---> means this make directory ( files ) in your location cd now and then the name of folder is AMR_ws and inside the AMR_ws there is src folder
+
