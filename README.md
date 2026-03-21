@@ -7,11 +7,15 @@
 
 ## First you must set up by using and set up the ROS 2 workspace 
 
-**cd /yourdirectory**
+
 
 ## Set up enviroment 
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+
+## Run Rviz 
+cd ~/Documents/urdf_file/urdf
+ros2 launch amr_launch.py
 
 ## Make a workspace 
 cd ~/ros2_ws
