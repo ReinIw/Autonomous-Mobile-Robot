@@ -17,10 +17,8 @@ source ~/.bashrc
 cd ~/Documents/urdf_file/urdf
 ros2 launch amr_launch.py
 
-## Make a workspace 
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
+## easiest way to Run 
+ros2 launch /home/rein/Documents/urdf_file/urdf/amr_launch.py
 
 
 
