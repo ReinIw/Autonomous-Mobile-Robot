@@ -49,7 +49,8 @@ sudo apt install ros-humble-rviz2 -y
 2. Also you need to define the front and the back and must be consistent to define the direction.
 3. After we open the Rviz we must to define 
 4. must set up the ROS2 Workspace first to run the Rviz
-5. Set up the global option ( fixed frame into your base link. stl ) add robot model then scroll down search for description topic change into robot_description 
+5. Set up the global option ( fixed frame into your base link. stl ) add robot model then scroll down search for description topic change into robot_description
+6. Watch out for CmakeList.txt and package.xml it needs to be switch to ROS2 (_the code that extract from sw2urdf is for ros 1_) by change the code _you can see the example in branch GAZEBO for the CMake and package_
 
 
 <img width="1842" height="998" alt="image" src="https://github.com/user-attachments/assets/db8c7916-37db-4c3c-93a0-5a8825210f63" /># Autonomous-Mobile-Robot
