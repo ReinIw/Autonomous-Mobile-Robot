@@ -1,4 +1,4 @@
-# Step using Gazebo
+# Step to make Workspace first to use Gazebo
 
 ## First to start gazebo-ing you need to make workspace first 
 
