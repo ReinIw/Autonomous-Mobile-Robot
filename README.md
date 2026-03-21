@@ -88,4 +88,5 @@ EOF
 
 
 ### Try to Run
+cd ~/AMR_ws
 ros2 launch amr_robot display.launch.py
