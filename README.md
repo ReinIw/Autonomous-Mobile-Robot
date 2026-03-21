@@ -10,3 +10,7 @@ cd ~/Documents
 mkdir -p ~/AMR_ws/src  
 _means this make directory ( files ) in your location cd now and then the name of folder is AMR_ws and inside the AMR_ws there is src folder_
 
+
+### Copy Folder 
+cp -r ~/Documents/urdf_file ~/AMR_ws/src/amr_robot
+means the source  ~/Documents/urdf_file the files is copy into ~/AMR_ws/src/amr_robot
