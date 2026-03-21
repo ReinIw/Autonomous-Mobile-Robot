@@ -1,16 +1,22 @@
-# Autonomous-Mobile-Robot
-### This github is for beginner in ROS 2 but also you can skip while skiming the process of this step
+# Dictionary of ROS 2 node 
 
-## Important command to use 
-
-### Access Folder in ROS 2 
-cd ~/Documents
-
-### Make Folder  
-mkdir -p ~/AMR_ws/src  
-_means this make directory ( files ) in your location cd now and then the name of folder is AMR_ws and inside the AMR_ws there is src folder_
+## Robot_state_publisher : to open urdf Files 
+Node(
+    package='robot_state_publisher',
+    executable='robot_state_publisher',
+    parameters=[{'robot_description': robot_desc}]
+)
 
 
-### Copy Folder 
-cp -r ~/Documents/urdf_file ~/AMR_ws/src/amr_robot
-means the source  ~/Documents/urdf_file the files is copy into ~/AMR_ws/src/amr_robot
+## joint_state_publisher_gui : moving the joint robot by using slider 
+Node(
+    package='joint_state_publisher_gui',
+    executable='joint_state_publisher_gui',
+),
+
+
+## RVIz2 : to visualize the 3d of the Robot 
+Node(
+    package='rviz2',
+    executable='rviz2',
+)
