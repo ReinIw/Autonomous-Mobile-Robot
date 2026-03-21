@@ -4,4 +4,4 @@
 ## Important command to use 
 
 ### Access Folder in ROS 2 
-cd ~/yourdirectory/folder1/insidefolder1/insideinsidefolder1 
+cd ~/Documents
