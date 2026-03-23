@@ -25,7 +25,6 @@ echo "=== SLAM ===" && ros2 pkg list | grep slam
 sudo apt install ros-humble-teleop-twist-keyboard -y
 
 ## Add plugin you can add before </robot> just search in urdf files 
-'''
-
+_you can add this from plugintoadd files in this branch_
 
 
