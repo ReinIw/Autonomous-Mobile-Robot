@@ -27,4 +27,12 @@ sudo apt install ros-humble-teleop-twist-keyboard -y
 ## Add plugin you can add before </robot> just search in urdf files 
 _you can add this from plugintoadd files in this branch_
 
+## Add launchfile gazebo.py in this branch 
 
+## Dont forget to build workspace by using this command 
+cd ~/AMR_ws
+colcon build
+source install/setup.bash
+
+## Run Gazebo by 
+ros2 launch amr_robot gazebo.launch.py
