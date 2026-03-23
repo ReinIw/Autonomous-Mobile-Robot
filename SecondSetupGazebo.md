@@ -25,6 +25,7 @@ echo "=== SLAM ===" && ros2 pkg list | grep slam
 sudo apt install ros-humble-teleop-twist-keyboard -y
 
 ## Add plugin you can add before </robot> just search in urdf files 
+'''
 <gazebo>
   <plugin name="differential_drive_controller" 
           filename="libgazebo_ros_diff_drive.so">
