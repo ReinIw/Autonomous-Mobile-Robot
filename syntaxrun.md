@@ -34,3 +34,7 @@ ros2 topic pub --once /cmd_vel_target geometry_msgs/msg/Twist "{linear: {x: 0.0,
 ```
 ros2 run plotjuggler plotjuggler
 ```
+## Record the data 
+```
+ros2 bag record /odom
+```
