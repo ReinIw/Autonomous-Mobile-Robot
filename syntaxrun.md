@@ -41,5 +41,5 @@ ros2 bag record /odom
 ```
 ros2 param set /pid_dob_controller ki 0.0
 ros2 param set /pid_dob_controller kd 0.0
-ros2 param set /pid_dob_controller kp 0.5
+ros2 param set /pid_dob_controller kp 10
 **`
