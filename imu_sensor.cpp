@@ -24,7 +24,7 @@ void imu_init() {
 
   // --- MENGAKTIFKAN REPORT DATA (50Hz = 20000 microsecond) ---
   // SLAM membutuhkan Quaternion (Rotation Vector), Gyro, dan Linear Accel
-  bno08x.enableReport(SH2_ROTATION_VECTOR, 20000); 
+  bno08x.enableReport(SH2_GAME_ROTATION_VECTOR, 20000); 
   bno08x.enableReport(SH2_GYROSCOPE_CALIBRATED, 20000); 
   bno08x.enableReport(SH2_LINEAR_ACCELERATION, 20000); 
 }
@@ -37,7 +37,7 @@ void imu_read_data(sensor_msgs__msg__Imu *msg) {
 
   // Jika sensor mengalami reset (misal karena lonjakan arus), aktifkan ulang reportnya
   if (bno08x.wasReset()) {
-    bno08x.enableReport(SH2_ROTATION_VECTOR, 20000);
+    bno08x.enableReport(SH2_GAME_ROTATION_VECTOR, 20000);
     bno08x.enableReport(SH2_GYROSCOPE_CALIBRATED, 20000);
     bno08x.enableReport(SH2_LINEAR_ACCELERATION, 20000);
   }
@@ -46,11 +46,11 @@ void imu_read_data(sensor_msgs__msg__Imu *msg) {
   while (bno08x.getSensorEvent(&sensorValue)) {
     switch (sensorValue.sensorId) {
       
-      case SH2_ROTATION_VECTOR:
-        msg->orientation.x = sensorValue.un.rotationVector.i;
-        msg->orientation.y = sensorValue.un.rotationVector.j;
-        msg->orientation.z = sensorValue.un.rotationVector.k;
-        msg->orientation.w = sensorValue.un.rotationVector.real;
+      case SH2_GAME_ROTATION_VECTOR:
+        msg->orientation.x = sensorValue.un.gameRotationVector.i;
+        msg->orientation.y = sensorValue.un.gameRotationVector.j;
+        msg->orientation.z = sensorValue.un.gameRotationVector.k;
+        msg->orientation.w = sensorValue.un.gameRotationVector.real;
         break;
         
       case SH2_GYROSCOPE_CALIBRATED:
