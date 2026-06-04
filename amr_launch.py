@@ -21,17 +21,17 @@ def generate_launch_description():
             output='screen'
         ),
 
+        ExecuteProcess(
+            cmd=['python3', os.path.join(base_path, 'velocityinvert.py')],
+            output='screen'
+        ),
+
         # 3. Menyalakan Penambal IMU (Paspor VIP EKF)
         ExecuteProcess(
             cmd=['python3', os.path.join(base_path, 'imu_fixer.py')],
             output='screen'
         ),
         
-         
-        ExecuteProcess(
-            cmd=['python3', os.path.join(base_path, 'cmd_vel_inverter.py')],
-            output='screen'
-        ),
         
         # 4. Koreksi Fisik IMU (Ingat: Pitch 180 derajat / 3.14159 karena sensor tengkurap!)
         Node(
@@ -48,7 +48,7 @@ def generate_launch_description():
         Node(
             package='robot_localization',
             executable='ekf_node',
-            name='ekf_filter_node',
+            name='ekf_filter_node', 
             parameters=[ekf_config_path],
             output='screen'
         )

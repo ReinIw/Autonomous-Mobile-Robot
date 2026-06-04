@@ -82,8 +82,8 @@ class OdomNode(Node):
             
         # 3. Kinematika Differential Drive
         dc = (dl + dr) / 2.0
-        dth = (dr - dl) / self.wheel_base
-        dth = dth * -1.0
+        dc = dc * -1.0 
+        dth = (dr - dl) / self.wheel_base * -1.0
         # 4. Update Posisi Global Robot
         self.x += dc * math.cos(self.th + dth / 2.0)
         self.y += dc * math.sin(self.th + dth / 2.0)
